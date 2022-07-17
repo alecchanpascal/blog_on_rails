@@ -11,6 +11,13 @@
   </head>
 
   <body>
+  <nav>
+  <%= link_to "Home", posts_path %>
+  <%= link_to "New Post", new_post_path %>
+  </nav>
+  <% flash.each do |type, message| %>
+  <%= type + ": " + message %>
+  <% end %>
     <%= yield %>
   </body>
 </html>

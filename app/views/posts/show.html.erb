@@ -1,0 +1,27 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<p><small>Posted <%= time_ago_in_words(@post.created_at) %> ago</small></p>
+<div>
+<%= button_to "Edit", edit_post_path, :method => :get, :class => "btn btn-outline-primary"%>
+<%= button_to "Delete", post_path(@post), method: :delete, :class => "btn btn-outline-primary"%>
+</div>
+<br>
+
+<h3>Comment</h3>
+<%= form_with(model:[@post, @comment]) do |f| %>
+<div>
+<%= f.label :body %>
+<br>
+<%= f.text_area :body %>
+</div>
+<%= f.submit :Submit, :class => "btn btn-outline-primary" %>
+<% end %>
+<br> 
+
+<% @comments.each do |comment| %>
+<div>
+<p><%= comment.body %></p>
+<p><small><%= time_ago_in_words(comment.created_at) %></small></p>
+<%= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are You Sure?"} %>
+</div>
+<% end %>
