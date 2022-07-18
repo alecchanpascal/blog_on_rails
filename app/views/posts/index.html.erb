@@ -1,5 +1,12 @@
 <% @posts.each do |post| %>
-    <div>
-        <h2><%= link_to post.title, post_path(post) %></h2>
+<div class="card">
+    <div class="card-body">
+        <h2><%= link_to post.title, post_path(post), class: "card-title" %></h2>
+        <% preview = "" %>
+        <% for i in 0..44 do %> 
+        <% preview += post.body[i] %> 
+        <% end %>
+        <p class="card-text"><%= preview %>...</p>
     </div>
+</div>
 <% end %>

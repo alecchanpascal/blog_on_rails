@@ -1,0 +1,53 @@
+//All
+#body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+//Header
+#navbarNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+//Index
+.card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+}
+
+//Show
+#post {
+    margin-top: 1rem;
+}
+
+#buttons {
+    display:flex;
+}
+
+#edit {
+    margin-right: 0.5rem;
+}
+
+#comment {
+    margin-bottom: 1rem;
+}
+
+#comments {
+    display: flex;
+}
+
+#comment-time {
+    margin-right: 0.5rem;
+}
+
+//Edit & New
+#title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
