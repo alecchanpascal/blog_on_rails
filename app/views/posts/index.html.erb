@@ -1,3 +1,46 @@
+<div class="desktop">
+<% @posts.in_groups_of(3) do |post_group|%>
+<div class="row">
+<% post_group.each do |post|%>
+<div class="col"> 
+<div class="card">
+    <div class="card-body">
+        <h2><%= link_to post.title, post_path(post), class: "card-title" %></h2>
+        <% preview = "" %>
+        <% for i in 0..44 do %> 
+        <% preview += post.body[i] %> 
+        <% end %>
+        <p class="card-text"><%= preview %>...</p>
+    </div>
+</div>
+</div>
+<% end %>
+</div>
+<% end %>
+</div>
+
+<div class="tablet">
+<% @posts.in_groups_of(2) do |post_group|%>
+<div class="row">
+<% post_group.each do |post|%>
+<div class="col"> 
+<div class="card">
+    <div class="card-body">
+        <h2><%= link_to post.title, post_path(post), class: "card-title" %></h2>
+        <% preview = "" %>
+        <% for i in 0..44 do %> 
+        <% preview += post.body[i] %> 
+        <% end %>
+        <p class="card-text"><%= preview %>...</p>
+    </div>
+</div>
+</div>
+<% end %>
+</div>
+<% end %>
+</div>
+
+<div class="mobile">
 <% @posts.each do |post| %>
 <div class="card">
     <div class="card-body">
@@ -10,3 +53,4 @@
     </div>
 </div>
 <% end %>
+</div>

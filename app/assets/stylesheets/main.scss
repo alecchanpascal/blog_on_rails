@@ -17,8 +17,15 @@ a {
 //Index
 .card {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: grid;
+    min-height: 90%;
+}
+
+.tablet{
+    display: none;
+}
+
+.mobile {
+    display: none;
 }
 
 //Show
@@ -50,4 +57,24 @@ a {
 #title {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) and (min-width: 450px) {
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
 }
