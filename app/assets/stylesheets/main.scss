@@ -1,0 +1,81 @@
+//All
+#body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+//Header
+#navbarNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+//Index
+.card {
+    margin-top: 1rem;
+    min-height: 90%;
+    max-width: auto;
+}
+
+.tablet{
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+//Show
+#post {
+    margin-top: 1rem;
+}
+
+#buttons {
+    display:flex;
+}
+
+#edit {
+    margin-right: 0.5rem;
+}
+
+#comment {
+    margin-bottom: 1rem;
+}
+
+#comments {
+    display: flex;
+}
+
+#comment-time {
+    margin-right: 0.5rem;
+}
+
+//Edit & New
+#title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) and (min-width: 451px) {
+    .desktop {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
